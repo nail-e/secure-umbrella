@@ -2,6 +2,8 @@ from unittest import skip
 from variables import *         #Imports all variables from variables.py
 import time
 from tqdm import tqdm           #Imports tqdm, a loading bar
+from createpassword import *    #Imports all variables from createpassword.py
+from createfile import *        #Imports all variables from createfile.py
 
 #Local Variables 
 IsMenuDone = 0 
