@@ -6,7 +6,7 @@ def CreateAPassword():
     import random
 
     #Local Variables
-    Password = ""               #Is the password before removal of RestrictedCharacters
+    raw_Password = ""               #Is the password before removal of RestrictedCharacters
     SecurityType = 0            #Indicates if user choice is basic, medium or hard
     IsSecurityTypeDone = 0      #Indicates if SecurityType selection loop is done
     PasswordLength = 0          #Indicates Password Length
@@ -46,20 +46,20 @@ def CreateAPassword():
         if SecurityType == 1:
             skipline()
             print("You have chosen a Basic security password, which includes Alphabetic values.")
-            Password = ("".join(random.choice(string.ascii_letters)for i in range (PasswordLength)))   
+            raw_Password = ("".join(random.choice(string.ascii_letters)for i in range (PasswordLength)))   
             IsSecurityTypeDone += 1
         elif SecurityType == 2:
             skipline()
             print("You have chosen a Medium security password, which include Alphanumeric values.")
-            Password = ("".join(random.choice(string.ascii_letters)for i in range (PasswordLength)))
-            Password += ("".join(random.choice(string.digits)for i in range (PasswordLength)))  
+            raw_Password = ("".join(random.choice(string.ascii_letters)for i in range (PasswordLength)))
+            raw_Password += ("".join(random.choice(string.digits)for i in range (PasswordLength)))  
             IsSecurityTypeDone += 1
         elif SecurityType == 3:
             skipline()
             print("You have chosen a High security password, which include Alphanumeric values and special characters.")
-            Password = ("".join(random.choice(string.ascii_letters)for i in range (PasswordLength)))
-            Password += ("".join(random.choice(string.digits)for i in range (PasswordLength)))
-            Password += ("".join(random.choice(string.punctuation)for i in range (PasswordLength)))
+            raw_Password = ("".join(random.choice(string.ascii_letters)for i in range (PasswordLength)))
+            raw_Password += ("".join(random.choice(string.digits)for i in range (PasswordLength)))
+            raw_Password += ("".join(random.choice(string.punctuation)for i in range (PasswordLength)))
             IsSecurityTypeDone += 1
         else:
             skipline()
@@ -69,7 +69,7 @@ def CreateAPassword():
     RestrictedCharactersText = "".join(RestrictedCharactersText)
     #Password.replace(RestrictedCharactersText,random.choice(string.ascii_letters))
     temp_Password.replace(RestrictedCharactersText,"-")
-    temp_Password = list(Password)
+    temp_Password = list(raw_Password)
     random.shuffle(temp_Password)
     final_Password = "".join(temp_Password)
 
@@ -80,5 +80,4 @@ def CreateAPassword():
     #Password trimming
     final_Password = final_Password[0:PasswordLength] 
 
-    #Temporary Print Password
-    print(final_Password)
+    SaveNewPassword()
