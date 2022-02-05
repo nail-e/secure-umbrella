@@ -40,15 +40,10 @@ def SaveNewPassword():
     print("Save New Password?")
     print("[y/n]")
 
-#Part of createfile.py
+#Part of createtxt.py
+CurrentFolder = os.getcwd
 
 def NewDirectory():
-    if not os.mkdir("Saved Passwords"):
-        os.mkdir("Saved Passwords")
-        for i in tqdm (range(int(5e6)), desc="Creating folder 'Saved Passwords'"):
-            pass
-        print("Created folder for Saved Passwords")
-    else:
-        print("Folder already Created")
+    os.mkdir("Saved Passwords")
 
 #def NewFile():
