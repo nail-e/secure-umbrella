@@ -1,7 +1,6 @@
 #Variables.py
 
 #Dictionary
-from createfile import CurrentDirectory
 import os
 from tqdm import tqdm
 
