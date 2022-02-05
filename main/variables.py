@@ -1,6 +1,9 @@
 #Variables.py
 
 #Dictionary
+from createfile import CurrentDirectory
+import os
+from tqdm import tqdm
 
 #Title that prints Secure Umbrella title
 def SecureUmbrella_title():
@@ -32,6 +35,21 @@ def PasswordSecurity():
     print("[1.] Basic (A-Z & a-z Only)")
     print("[2.] Medium (A-Z, a-z & 0-9)")
     print("[3.] High (A-Z, a-z, 0-9 & Special Characters)")
-                                                                        
 
-#Arrays
+def SaveNewPassword():
+    print("")
+    print("Save New Password?")
+    print("[y/n]")
+
+#Part of createfile.py
+
+def NewDirectory():
+    if not os.mkdir("Saved Passwords"):
+        os.mkdir("Saved Passwords")
+        for i in tqdm (range(int(5e6)), desc="Creating folder 'Saved Passwords'"):
+            pass
+        print("Created folder for Saved Passwords")
+    else:
+        print("Folder already Created")
+
+#def NewFile():
