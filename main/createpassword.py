@@ -1,6 +1,7 @@
 from variables import *
 
 def CreateAPassword():
+    global final_Password
     from tqdm import tqdm
     import string
     import random
