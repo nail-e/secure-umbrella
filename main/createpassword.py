@@ -80,4 +80,5 @@ def CreateAPassword():
     #Password trimming
     final_Password = final_Password[0:PasswordLength] 
 
-    #
+    #Temporary Print Password
+    print(final_Password)
