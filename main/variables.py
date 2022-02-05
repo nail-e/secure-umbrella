@@ -27,7 +27,8 @@ def skipline():
 #Part of createpassword.py
 
 def PasswordSecurity():
-    print("Choose Your Security Type")
+    print("")
+    print("Security Types")
     print("[1.] Basic (A-Z & a-z Only)")
     print("[2.] Medium (A-Z, a-z & 0-9)")
     print("[3.] High (A-Z, a-z, 0-9 & Special Characters)")
