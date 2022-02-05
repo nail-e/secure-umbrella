@@ -17,16 +17,16 @@ while IsMenuDone == 0:
     MainMenuInput = int(input("Choose an option: ")) 
     if MainMenuInput == 1:
         #function for Creating Password
-        IsMenuDone = IsMenuDone + 1
+        IsMenuDone += 1
     elif MainMenuInput == 2:
         #function for Store Existing Password
-        IsMenuDone = IsMenuDone + 1
+        IsMenuDone += 1
     elif MainMenuInput == 3:
         #function for S
-        IsMenuDone = IsMenuDone + 1
+        IsMenuDone += 1
     elif MainMenuInput == 4:
         print("Exiting Program")
-        IsMenuDone = IsMenuDone + 1
+        IsMenuDone += 1
     else:
         skipline()
         print("Invalid Input!")
