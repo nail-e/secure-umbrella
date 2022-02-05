@@ -1,8 +1,39 @@
 #Variables.py
 
 #Dictionary
+from locale import currency
 import os
 from tqdm import tqdm
+
+#Part of main.py
+
+def HomeMenu():
+    #Local Variables 
+    IsMenuDone = 0 
+    MainMenuInput = 0
+    from createpassword import CreateAPassword
+    from createtxt import CreateTxt
+
+    while IsMenuDone == 0:
+        mainmenu()
+        skipline()
+        MainMenuInput = int(input("Choose an option: ")) 
+        if MainMenuInput == 1:
+            CreateAPassword()
+            IsMenuDone += 1
+        elif MainMenuInput == 2:
+            CreateTxt()
+            IsMenuDone += 1
+        elif MainMenuInput == 3:
+            #function for S
+            IsMenuDone += 1
+        elif MainMenuInput == 4:
+            print("Exiting Program")
+            IsMenuDone += 1
+        else:
+            skipline()
+            print("Invalid Input!")
+
 
 #Title that prints Secure Umbrella title
 def SecureUmbrella_title():
@@ -36,9 +67,21 @@ def PasswordSecurity():
     print("[3.] High (A-Z, a-z, 0-9 & Special Characters)")
 
 def SaveNewPassword():
+    from createpassword import final_Password
+    from createtxt import CreateTxt
+    global PasswordChoice
+
+    PasswordChoice = ""
     print("")
     print("Save New Password?")
-    print("[y/n]")
+    PasswordChoice = str(input(("[y/n] ")))
+    if PasswordChoice == "y":
+        #Insert function for create.txt
+        CreateTxt()
+        pass
+    elif PasswordChoice == "n":
+        print("Your to-be password was", final_Password)
+        HomeMenu()
 
 #Part of createtxt.py
 CurrentFolder = os.getcwd
