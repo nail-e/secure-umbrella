@@ -1,12 +1,12 @@
 # Roadmap
 ### Planning
-- [] Create Flowchart
+- [x] Create Flowchart/Pseudocode
 ### Main File
 - [x] Create Variable File
     - [x] Create separate Array File
 - [x] Create Main File
     - [x] Import Variable File Variables
-- [] Create Function Files
+- [x] Create Function Files
     - [] Create Password File
     - [] Store Password File
     - [] View Existing Passwords
