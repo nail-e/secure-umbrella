@@ -40,4 +40,3 @@ def CreateTxt():
             print(SiteName, file=f)
             print(LoginName, file=f)
             print(ExistingPassword, file=f)
-
