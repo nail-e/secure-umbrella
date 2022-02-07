@@ -22,12 +22,9 @@ def HomeMenu():
             CreateAPassword()
             IsMenuDone += 1
         elif MainMenuInput == 2:
-            CreateTxt()
-            IsMenuDone += 1
-        elif MainMenuInput == 3:
             #function for S
             IsMenuDone += 1
-        elif MainMenuInput == 4:
+        elif MainMenuInput == 0:
             print("Exiting Program")
             IsMenuDone += 1
         else:
@@ -50,9 +47,8 @@ def mainmenu():
     print("|_|  |_\___|_||_\_,_|")
     print("'----------------------'")
     print("[1.] Create Password")
-    print("[2.] Store Existing Password")
-    print("[3.] View Stored Passwords")
-    print("[4.] Exit")
+    print("[2.] View Stored Passwords")
+    print("[0.] Exit")
                       
 def skipline():
  print("")
